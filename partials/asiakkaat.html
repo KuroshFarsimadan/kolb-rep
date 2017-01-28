@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div ng-controller="asiakkaatController">
+        <container class="container">
+          <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#/asiakkaat"><span class="glyphicon glyphicon-search"></span> Haku</a></li>
+            <li role="presentation"><a href="#/asiakkaat_lisays"><span class="glyphicon glyphicon-plus"></span> Lisää Asiakas</a></li>
+            </ul>
+        </container>
+  
+        <container class="container">
+          <div class="page-header">
+            <form ng-submit="submitSearchCustomer()"> 
+              <div class="input-group">
+                <input name="hakukriteerit" id="hakukriteerit" ng-model="hakukriteerit" type="text" class="form-control" placeholder="Asiakashaun kriteerit">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                  </span>
+              </div><!-- /input-group -->
+            </form>
+          </div>
+        </container>
+        <div ng-hide="haku">
+          <container class="container">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Asiakasnumero</th>
+                  <th>Nimi</th>
+                  <th>Osoite</th>
+                  <th>Puhelinnumero</th>
+                  <th>Henkilö/Y-tunnus</th>
+                  <th></th>
+                </tr>
+              </thead>            
+              <tbody>
+              <!-- search a method to get hakuData(beginning, end) in javascript-->
+                <tr ng-repeat="user in hakuData2 | limitTo:20"> <!-- user in hakuData -->
+                  <td>{{ user.id }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.name }}</td>
+                  <td><button ng-click="redirectPage(user.id)" type="submit" id="" name="" class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                </tr>
+              </tbody>
+            </table>
+            <ul uib-pagination total-items="bigTotalItems" ng-click="setPage(bigCurrentPage)" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true"></ul>
+            </container>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- /.container -->

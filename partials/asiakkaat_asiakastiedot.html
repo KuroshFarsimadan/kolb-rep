@@ -1,0 +1,116 @@
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div ng-controller="asiakkaatTiedotController">
+            <container class="container">
+              <ul class="nav nav-pills">
+                <li role="presentation"><a href="#/asiakkaat"><span class="glyphicon glyphicon-search"></span> Haku</a></li>
+                <li role="presentation"><a href="#/asiakkaat_lisays"><span class="glyphicon glyphicon-plus"></span> Lisää Asiakas</a></li>
+                <li role="presentation" class="active"><a href="/asiakkaat_asiakastiedot">Asiakastiedot</a></li>
+                <li role="presentation"><a href="">Palvelut</a></li>
+                <li role="presentation"><a href="">Laskutus</a></li>
+                <li role="presentation"><a href="">Viestit</a></li>
+              </ul>
+            </container>
+            <container class="container">
+              <form onSubmit="" name="saveCustomerDetails" action="" method="POST">
+                <div class="page-header">
+                  <div class="row">
+                    <div class="col-sm-3"><h2 >{{ nimi }}</h2></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Asiakasnumero</label>
+                      <input id="asiakasnumero" name="asiakasnumero" ng-model="asiakasnumero" maxlength="15" required type="text" class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Henkilötunnus</label>
+                      <input id="henkilotunnus" name="henkilotunnus" ng-model="henkilotunnus" type="text" maxlength="15" required class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div>                
+                </div>
+  
+                <div class="row">
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Etunimi</label>
+                      <input id="etunimi" name="etunimi" ng-model="etunimi" type="text" maxlength="15" required class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Sukunimi</label>
+                      <input id="sukunimi" name="sukunimi" ng-model="sukunimi" type="text" maxlength="15" required class="form-control" ng-attr-placeholder="{{ data.name }}" />
+                    </div>
+                  </div>                
+                </div>
+                
+                <div class="row">
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Katuosoite</label>
+                      <input id="katuosoite" name="katuosoite" ng-model="katuosoite" type="text" required class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div>
+                </div>              
+  
+                <div class="row">
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Postinumero</label>
+                      <input id="postinumero" name="postinumero" ng-model="postinumero" type="text" maxlength="15" required class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Postitoimipaikka</label>
+                      <input id="postitoimipaikka" name="postitoimipaikka" ng-model="postitoimipaikka" type="text" maxlength="15" required class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="">Maa</label>
+                      <input id="maa" name="maa" ng-model="maa" type="text" maxlength="15" required class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div> 
+                </div>
+                
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="">Sama laskutusosoite &nbsp;</label>
+                      <input id="laskutusosoite" name="laskutusosoite" ng-model="laskutusosoite" type="checkbox" aria-label="..." placeholder="{{ data.name }}">
+                    </div>
+                  </div>
+                </div> 
+                
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="">Puhelin</label>
+                      <input id="puhelin" name="puhelin" ng-model="puhelin" type="text" maxlength="15" required class="form-control" placeholder="{{ data.name }}">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="">Sähköpostiosoite</label>
+                      <input id="sahkopostiosoite" name="sahkopostiosoite" ng-model="sahkopostiosoite" type="email" required class="form-control" placeholder="{{ data.name }}">                
+                    </div>
+                  </div>
+                </div> 
+                
+                <div class="row">
+                  <div class="col-sm-3"><button type="submit" class="btn btn-success">Tallenna</button></div>
+                </div>
+              </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
